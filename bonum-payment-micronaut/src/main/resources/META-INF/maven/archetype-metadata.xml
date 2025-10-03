@@ -1,0 +1,78 @@
+<archetype-descriptor
+        xmlns="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.2.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.2.0 https://maven.apache.org/xsd/archetype-descriptor-1.2.0.xsd"
+        name="bonum-payment-micronaut">
+    <fileSets>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/main/kotlin</directory>
+            <includes>
+                <include>**/*.kt</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>src/test/kotlin</directory>
+            <includes>
+                <include>**/*.kt</include>
+            </includes>
+            <filtered>true</filtered>
+        </fileSet>
+        <!-- Other project files -->
+        <fileSet filtered="true" packaged="false">
+            <directory></directory>
+            <includes>
+                <include>README.md</include>
+                <include>settings.xml</include>
+                <include>Dockerfile</include>
+                <include>.gitignore</include>
+                <include>aot-jar.properties</include>
+                <include>micronaut-cli.yml</include>
+            </includes>
+            <excludes>
+                <exclude>pom.xml</exclude>
+            </excludes>
+        </fileSet>
+        <!-- POM file -->
+        <fileSet filtered="true" packaged="false">
+            <directory>.</directory>
+            <includes>
+                <include>pom.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="false">
+            <directory>static</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <requiredProperties>
+        <!-- groupId with default -->
+        <requiredProperty key="groupId">
+            <defaultValue>infinite.bonum</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="version">
+            <defaultValue>1.0.0-SNAPSHOT</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="packagePrefix">
+            <defaultValue>infinite.bonum.payment</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="packagePrefixInPathFormat">
+            <defaultValue>infinite/bonum/payment</defaultValue>
+        </requiredProperty>
+        <requiredProperty key="package">
+            <defaultValue>${artifactId}</defaultValue>
+        </requiredProperty>
+
+        <requiredProperty key="appName">
+            <defaultValue>${artifactId}</defaultValue>
+        </requiredProperty>
+    </requiredProperties>
+</archetype-descriptor>

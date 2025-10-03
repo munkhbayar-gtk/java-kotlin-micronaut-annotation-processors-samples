@@ -1,0 +1,6 @@
+applicationType: default
+defaultPackage: ${packagePrefix}.${package}
+testFramework: junit
+sourceLanguage: kotlin
+buildTool: maven
+features: [app-name, hibernate-jpa, http-client-test, jdbc-hikari, junit, kapt, kotlin, kotlin-application, logback, maven, maven-enforcer-plugin, micronaut-aot, micronaut-http-validation, mysql, netty-server, properties, readme, redis-lettuce, serialization-jackson, shade, static-resources, test-resources]
